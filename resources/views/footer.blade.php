@@ -1,6 +1,6 @@
 <div class="container-fluid text-white">
     <footer class="text-center">
-        <div class="row mt-3 p-5" style="background-color: #2C3E50">
+        <div class="row p-5" style="background-color: #2C3E50">
             <div class="footer-col col-md-6">
                 <h4 class="display-4">Location</h4>
                 <p style="font-size: 18px;">Lahore

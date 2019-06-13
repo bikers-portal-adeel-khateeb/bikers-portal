@@ -1,4 +1,8 @@
-$( '#navbarSupportedContent .navbar-nav a' ).on( 'click', function () {
-	$( '#navbarSupportedContent .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
-	$( this ).parent( 'li' ).addClass( 'active' );
+
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();   
+});
+
+$(function () {
+    $('#date').datepicker({ minDate: 0 });
 });

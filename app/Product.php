@@ -8,13 +8,18 @@ class Product extends Model
 {
 	protected $guarded = [];
 	
-	public function Orders()
+	public function orderDetails()
 	{
-		return $this->hasMany('App\Order');
+		return $this->hasMany('App\OrderDetail');
 	}
 
     public function ProductCategory()
     {
     	return $this->belongsTo('App\ProductCategory');
+    }
+
+    public function carts()
+    {
+    	return $this->hasMany('App\Cart');
     }
 }
