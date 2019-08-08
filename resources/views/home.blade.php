@@ -55,23 +55,23 @@
   
 
 <div class="container-fluid mt-4 mb-4">
-  <body>
+  {{-- <body>
     <style>body{background-color: #afbdc4;}</style>
-  </body>
+  </body> --}}
     <div class="row">
       <div class="col-sm-4">
         @foreach ($bikes as $bike)
-        <a href="{{url('product/detail')}}/{{$bike->id}}">
-          <img class="card-img-top img-fluid" src="{{asset('public/storage/image')}}/{{$bike->image}}" 
-            alt="Card image" style="width:100%">
+          <a href="{{ url('product/detail') }}/{{ $bike->id }}">
+            <img class="img-fluid" src="{{ asset('public/storage/image') }}/{{ $bike->image }}" 
+              alt="Card image" style="width:100%">
           </a>        
         @endforeach
       </div>
    
       <div class="col-sm-4">
         @foreach ($parts as $part)
-          <a href="{{url('product/detail')}}/{{$part->id}}">
-            <img class="card-img-top img-fluid" src="{{asset('public/storage/image')}}/{{$part->image}}" 
+          <a href="{{ url('product/detail') }}/{{ $part->id }}">
+            <img class="img-fluid" src="{{ asset('public/storage/image') }}/{{ $part->image }}" 
               alt="Card image" style="width:100%">
           </a>
         @endforeach
@@ -79,8 +79,8 @@
 
       <div class="col-sm-4">
         @foreach ($accessories as $accessory)
-          <a href="{{url('product/detail')}}/{{$accessory->id}}">
-            <img class="card-img-top img-fluid" src="{{asset('public/storage/image')}}/{{$accessory->image}}" 
+          <a href="{{ url('product/detail') }}/{{ $accessory->id }}">
+            <img class="img-fluid" src="{{ asset('public/storage/image') }}/{{ $accessory->image }}" 
             alt="Card image" style="width:100%">
           </a>
         @endforeach
@@ -88,7 +88,7 @@
     </div>
 </div>
 
-  @include('footer') 
+@include('footer') 
 @endsection
 
 

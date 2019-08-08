@@ -66,6 +66,7 @@ class OrderController extends Controller
                 $order = Order::create([
                         'user_id' => auth()->user()->id,
                         'address_id' => $stored_address->id,
+                        'total' => session()->get('total')
                 ]);
 
                 foreach (session('cart') as $id => $item) {

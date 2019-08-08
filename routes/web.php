@@ -20,7 +20,7 @@ Route::get('/profile', 'ProfileController@show')->name('profile')->middleware('a
 Route::get('/orderDetail/{order}','OrderController@show')->name('orderDetail');
 Route::get('/rent/detail/{rentbike}','RentbikeController@show')->name('rentDetail');
 Route::post('/rent/rentbike','RentbikeController@rentbike')->name('rentbike');
-Route::post('/rent/rentbike/{rentbike}','RentbikeController@askRent')->name('askRent');
+Route::post('/rent/rentbike/{rentbike}','RentbikeController@askRent')->name('askRent')->middleware('auth');
 Route::post('/placRentOrder','RentbikeController@placeRentOrder')->name('rentOrder');
 Route::get('/checkout', 'OrderController@checkout')->name('checkout')->middleware('auth','customer');
 Route::post('/placeorder', 'OrderController@placeOrder')->name('placeOrder')->middleware('auth','customer');

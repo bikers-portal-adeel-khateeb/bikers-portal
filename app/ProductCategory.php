@@ -12,13 +12,4 @@ class ProductCategory extends Model
 
     }
 
-    // public function limitProducts()
-    // {
-    // 	return $this->hasMany('App\Product');
-    // 	return $this->hasMany('App\Product', 'ProductCategory_id')->orderBy('created_at')->take(1);
-
-    	
-    // }
-
-
 }

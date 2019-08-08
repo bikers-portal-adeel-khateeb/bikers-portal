@@ -8,7 +8,7 @@
  --}}  
 <div class="row"> {{-- main container --}}
     
-<div class="m-5 bg-light shadow col-md-6"> {{-- shippind and billing address 
+<div class="m-4 bg-light shadow col-md-6"> {{-- shippind and billing address 
  --}}
 
 
@@ -111,13 +111,20 @@
 </form>
 </div> {{-- shippind and billing address --}}
 
-<div class="m-5 col-">{{--  cart detail  --}} 
- <strong>bike: {{$bike}}</strong><hr>
- <strong>pick up date: {{$start_date}}</strong><hr>
-<strong>drop off date: {{$end_date}}</strong><hr>
-<strong>duration: {{$days}} days</strong><hr>
-<strong>Rent: {{$rent}}</strong><hr>
-<strong>Total Rent: {{$rent*$days}}</strong> 
+<div class="mt-4 offset-1 col-md-4">{{--  cart detail  --}} 
+   <div class="card">
+    <div class="card-body">
+      <h6><strong style="font-size: 18px;">Bike<span class="float-right">{{ $bike }}</span></strong></h6>
+         <h6>Pick up date<span class="float-right">{{ $start_date }}</span></h6>
+         <h6>Drop off date<span class="float-right">{{ $end_date }}</span></h6>
+         <h6>Duration<span class="float-right">{{ $days }}</span>days</h6>
+         <h6>Rent<span class="float-right">{{ $rent }}</span></h6>
+         <h6><strong style="font-size: 18px;">Total Rent<span class="float-right">{{ $rent * $days }}</span></strong></h6>
+      
+    </div>
+  </div>
+ 
+ 
     
 
 </div> {{-- cart detail --}}

@@ -48,7 +48,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>{{ $order->address->billing_firstname }} {{ $order->address->billing_lastName }}</td>
+            <td>{{ $order->address->billing_firstname }} {{ $order->address->billing_lastname }}</td>
             <td>{{ $order->address->billing_address }}</td>
             <td>{{ $order->address->billing_city }}</td>
             <td>{{ $order->address->billing_zip }}</td>

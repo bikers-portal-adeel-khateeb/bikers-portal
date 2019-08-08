@@ -14,7 +14,7 @@ class OrderDetailController extends Controller
      */
     public function index()
     {
-        //
+        //pr
     }
 
     /**

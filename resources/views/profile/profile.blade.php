@@ -37,7 +37,9 @@
 	<div class="offset-2 col-md-7">
 
 
-
+	@if ($user->orders->count())
+		
+	
 
 
  <ul class="navbar-nav">
@@ -56,7 +58,10 @@
 	<hr>    
 			@endforeach
      </ul> 
+@endif
 
+	@if ($user->rentOrders->count())
+		
 
      <ul class="navbar-nav">
 <h4 class="bg-info p-3 text-white"><strong>Rental Orders</strong></h4>
@@ -73,7 +78,9 @@
 	</p>  </li>
 			<hr>      
 			@endforeach
-     </ul> 
+     </ul>
+	@endif
+      
 </div>
 @endif
  </div>

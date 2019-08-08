@@ -44,7 +44,7 @@ class DashboardController extends Controller
                 'orders' => Order::where('status', 'pending')->get()->count(),
                 'products' => Product::all()->count(),
                 'rentOrders' => RentOrder::where('status', 'pending')->get()->count(),
-                'users' => User::all()->count(),
+                'users' => User::where('role_id', '1')->count(),
 
             ];
                 return view('admin_dashboard')->with($data);

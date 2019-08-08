@@ -85,6 +85,8 @@
      @endforeach
         </tbody>
               </table>
+{{-- {{session()->put('total',$total)}} --}}
+              
              {{--  @php
     $total = $cart->item->price * $cart->qty;
     $subtotal = $subtotal + $total;

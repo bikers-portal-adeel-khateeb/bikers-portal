@@ -13,4 +13,10 @@ class RentBike extends Model
 
      	return $this->belongsTo('App\City');
      }
+
+     public function rentOrders()
+     {
+
+     	return $this->hasMany('App\RentOrder');
+     }
 }

@@ -8,7 +8,7 @@ class City extends Model
 {
     protected $guarded = [];
 
-   	public function rentbickes()
+   	public function rentbikes()
    	{
 
    	return $this->hasMany('App\RentBike');

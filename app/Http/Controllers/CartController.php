@@ -29,40 +29,49 @@ class CartController extends Controller
 
         if(!$cart)
         {
-            $cart = [
+            // $cart = [
 
-                $product->id => [
+            //     $product->id => [
 
-                    'name' => $product->name,
-                    'quantity' => 1,
-                    'price' => $product->price,
-                    'image' => $product->image
+            //         'name' => $product->name,
+            //         'quantity' => 1,
+            //         'price' => $product->price,
+            //         'image' => $product->image
 
-                ]
+            //     ]
 
 
-            ];
+            // ];
+
+            $cart[$product->id] = [
+
+            'name' => $product->name,
+            'quantity' => 1,
+            'price' => $product->price,
+            'image' => $product->image
+
+        ];
 
             session()->put('cart', $cart);
 
             if (request()->has('buy_it_now')) {
-     
+        
      return redirect()->route('checkout');
  }
 
-            return back()->with('success', 'Prduct Added to Cart Succeccfully!');
+            return back()->with('success', 'Product Added to Cart Succeccfully!');
         }
 
         if(isset($cart[$product->id]))
         {
-            $cart[$product->id]['quantity']++;
-            session()->put('cart', $cart);
-
             if (request()->has('buy_it_now')) {
      
      return redirect()->route('checkout');
  }
-            return back()->with('success', 'Prduct Added to Cart Succeccfully!');
+            $cart[$product->id]['quantity']++;
+            session()->put('cart', $cart);
+
+            return back()->with('success', 'Product Added to Cart Succeccfully!');
 
         }
 
@@ -82,7 +91,7 @@ class CartController extends Controller
      return redirect()->route('checkout');
  }
 
-        return back()->with('success', 'Prduct Added to Cart Succeccfully!');
+        return back()->with('success', 'Product Added to Cart Succeccfully!');
 
 
 
@@ -149,7 +158,7 @@ class CartController extends Controller
         if ($id and $request->quantity) {
             # code...
         
-        $cart = session()->get('cart');
+        // $cart = session()->get('cart');
         $cart[$id]['quantity'] = $request->quantity;
         session()->put('cart', $cart);
         session()->flash('success', 'Cart Updated Successfully!');

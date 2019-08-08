@@ -18,4 +18,8 @@ class RentOrder extends Model
         return $this->belongsTo('App\Address');
     }
 
+    public function rentbike()
+    {
+        return $this->belongsTo('App\Rentbike');
+    }
 }

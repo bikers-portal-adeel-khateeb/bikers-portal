@@ -8,13 +8,11 @@
   <div class="container-fluid mt-5">
     <div class="row">
       <div class="col-sm-4 mt-5 ml-5">
-          <div class="card cards-height-set">
               <a href="#">
-                  <img class="card-img-top img-fluid shadow" 
+                  <img class="img-fluid shadow" 
                     src="{{asset('public/storage/image')}}/{{$rentbike->image}}" 
                       alt="Card image" style="width:100%">
                 </a>
-          </div>
         </div>
       <div class="offset-1 col-sm-6 mt-1">
         <h3>{{$rentbike->name}}</h3>
